@@ -1,0 +1,58 @@
+﻿#######################################
+# Syntax Coloring Map
+# lora BME280 and SPS30  //paulvha October 2019
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+lora_SPS30	KEYWORD1
+sps_values	KEYWORD1
+MassPM1	KEYWORD1
+MassPM1	KEYWORD1
+MassPM2	KEYWORD1
+MassPM4	KEYWORD1
+MassPM10	KEYWORD1
+lora_BME280	KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+lora_SPS30	KEYWORD2
+begin	KEYWORD2
+EnableDebugging	KEYWORD2
+reset	KEYWORD2
+start	KEYWORD2
+stop	KEYWORD2
+I2C_expect	KEYWORD2
+GetSerialNumber	KEYWORD2
+GetValues	KEYWORD2
+SetAutoCleanInt	KEYWORD2
+readHumidity	KEYWORD2
+readPressure	KEYWORD2
+readTemperature	KEYWORD2
+setSampling	KEYWORD2
+readAltitude	KEYWORD2
+seaLevelForAltitude	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+ERR_OK	LITERAL1
+ERR_DATALENGTH	LITERAL1
+ERR_UNKNOWNCMD	LITERAL1
+ERR_ACCESSRIGHT	LITERAL1
+ERR_PARAMETER	LITERAL1
+ERR_OUTOFRANGE	LITERAL1
+ERR_CMDSTATE	LITERAL1
+ERR_TIMEOUT	LITERAL1
+ERR_PROTOCOL	LITERAL1
+I2C_COMMS	LITERAL1
+
+
+
