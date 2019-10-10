@@ -19,9 +19,9 @@ For detailed information, please read the feather_lora.odt in the extras folder
 ## Prerequisites
 LMIC  : https://github.com/matthijskooijman/arduino-lmic
 
-If you plan to use the standard library :
-BME   : Adafruit_BME280 and Adafruit_Sensor
-SPS30 : sps (https://github.com/paulvha/sps30)
+If you plan to use the standard library:
+<br> BME   : Adafruit_BME280 and Adafruit_Sensor
+<br> SPS30 : sps (https://github.com/paulvha/sps30)
 
 ## Software installation
 Obtain the zip and install like any other
