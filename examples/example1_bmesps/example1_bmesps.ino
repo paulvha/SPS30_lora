@@ -1,6 +1,9 @@
 /************************************************************************************
  *  Copyright (c) October 2019, version 1.1     Paul van Haastrecht
  *
+ *  Version 1.2 / November 2019
+ *  - changed data order to make BME280 data optional (in case not found)
+ *
  *  =========================  Highlevel description ================================
  *
  *  This basic reading example sketch to connect an SPS30 and BME280 for providing data, and
@@ -348,21 +351,23 @@ void do_send(osjob_t* j) {
     return;
   }
 
+
   // Prepare upstream data transmission at the next possible time.
+  // order changed in version 1.2 to make BME data optional
   buffer[0]  = SPS_id >> 8;
   buffer[1]  = SPS_id;
-  buffer[2]  = temp_int >> 8;
-  buffer[3]  = temp_int;
-  buffer[4]  = rh_int >> 8;
-  buffer[5]  = rh_int; ;
-  buffer[6]  = p_int >> 8;
-  buffer[7]  = p_int;
-  buffer[8]  = pm10_Avg_int >> 8;
-  buffer[9]  = pm10_Avg_int;
-  buffer[10]  = pm25_Avg_int >> 8;
-  buffer[11]  = pm25_Avg_int;
-  buffer[12]  = pm1_Avg_int >> 8;
-  buffer[13]  = pm1_Avg_int;
+  buffer[2]  = pm10_Avg_int >> 8;
+  buffer[3]  = pm10_Avg_int;
+  buffer[4]  = pm25_Avg_int >> 8;
+  buffer[5]  = pm25_Avg_int;
+  buffer[6]  = pm1_Avg_int >> 8;
+  buffer[7]  = pm1_Avg_int;
+  buffer[8]  = temp_int >> 8;         //moved to the back as it might be optional
+  buffer[9]  = temp_int;
+  buffer[10]  = rh_int >> 8;
+  buffer[11]  = rh_int; ;
+  buffer[12]  = p_int >> 8;
+  buffer[13]  = p_int;
 
   LMIC_setTxData2(1, buffer, 14, 0);
 

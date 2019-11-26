@@ -1,0 +1,45 @@
+plugins {
+  id 'com.github.spotbugs' version '2.0.0'
+  id 'com.github.ben-manes.versions' version '0.27.0'
+}
+
+version = '0.1'
+
+allprojects { group = 'nl.bertriksikken' }
+
+// Define all library dependencies in one file for clarity
+apply from:'dependencies.gradle'
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "eclipse"
+    apply plugin: "pmd"
+     apply plugin: "com.github.spotbugs"
+     apply plugin: 'com.github.ben-manes.versions'
+    
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    pmd {
+        toolVersion = "5.8.1"
+    }
+    
+     tasks.withType(com.github.spotbugs.SpotBugsTask) {
+        reports.xml.enabled = false
+        reports.html.enabled = true
+    }
+
+    // Standard libraries added to all projects
+    dependencies {
+        testCompile libraries.junit
+	    testCompile libraries.mockito
+	    testCompile libraries.slf4jlog4j
+
+        compile libraries.slf4j
+    }
+
+}
