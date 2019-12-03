@@ -1,4 +1,4 @@
-# BME280 and Sensirion SPS30 connecting to TTN & Luftdaten
+# BME280 and Sensirion SPS30 connecting to TTN
 
 ## ===========================================================
 
@@ -35,11 +35,11 @@ Please see the description in the top of the sketch and read the documentation (
 ### version lora / October 2019
  * Initial version optimized for Arduino Feather lora 32U4
 
-### version Lora / 1.0.2 / November 2019
- * added forwarder between TTN and Luftdaten (see documentation in luftdaten folder)
- * forwarder tested on Ubuntu, Raspberry Pi and Windows 10
- * Forwarder can also save the data in a file in local directory or share
- * small change in the sketch in the data order
+### version lora / December 2019
+ * Included adjusted Luftdaten forwarder (based on https://github.com/bertrik/LoraLuftdatenForwarder)
+ * It has been adjusted for SPS30 as well as enabling saving the data locally in a file
+ * updated sketch with new data order
+ * updated the SPS30 library to 1.3.7
 
 ## Author
  * Paul van Haastrecht (paulvha@hotmail.com)
@@ -49,4 +49,5 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE 3.0
 
 ## Acknowledgements
 Make sure to read the datasheet from Sensirion. While draft it does provide good starting point.
+The Luftdaten forwarder is based on https://github.com/bertrik/LoraLuftdatenForwarder.
 

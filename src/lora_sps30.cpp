@@ -48,6 +48,9 @@
  * Version LORA / October 2019
  * - scaled down version to find an arduino feather 32U4
  * - supports UART I2C connection only as feather can not handle 115200 speed on uart
+ *
+ * Vesion LORA / December 2019
+ *  - included version 1.3.7 / December 2019: fixed ESP32 serial connection / flushing
  *********************************************************************
  */
 
@@ -645,6 +648,7 @@ uint8_t lora_SPS30::SendToSerial()
 uint8_t lora_SPS30::ReadFromSerial()
 {
     uint8_t ret;
+    _serial->flush();       //1.3.7
 
     // write to serial
     ret = SendToSerial();
@@ -690,7 +694,6 @@ uint8_t lora_SPS30::SerialToBuffer()
     uint32_t startTime;
     bool  byte_stuff = false;
     uint8_t i;
-    _serial->flush();
 
     startTime = millis();
     i = 0;

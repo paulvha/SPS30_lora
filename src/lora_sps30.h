@@ -47,6 +47,8 @@
  * - scaled down version to find an arduino feather 32U4
  * - supports UART I2C connection only as feather can not handle 115200 speed on uart
  *
+ * Vesion LORA / December 2019
+ *  - included Version 1.3.7 / December 2019: fixed ESP32 serial connection / flushing
  *********************************************************************
 */
 #ifndef SPS30_H
