@@ -3,7 +3,7 @@
 ## ===========================================================
 
 A program to set instructions and get information from an SPS30 and BME280
-and sent to TheThingsNetwerk (TTN).
+and sent to TheThingsNetwerk (TTN) & Luftdaten
 It has been tested to run with I2C communcation on Feather Lora 32U4.
 
 ## Getting Started
@@ -12,9 +12,10 @@ I have done a number of projects on air-sensors. The SPS30 sensor is a new kid o
 that looks interesting. This is the first version of a working driver + examples.
 More work is happening to create examples and compare against other sensors.
 
-This first is a cut down version of 1.3.6 for Arduino Feather LORA.
+The SPS30 library is a cut down version (1.3.7) for Arduino Feather LORA.
 
-For detailed information, please read the feather_lora.odt in the extras folder
+For detailed information, please read the feather_lora.odt in the extras folder.
+For Luftdaten : please read the TTN-Luftdata.odt in the Luftdaten folder
 
 ## Prerequisites
 LMIC  : https://github.com/matthijskooijman/arduino-lmic
@@ -38,8 +39,8 @@ Please see the description in the top of the sketch and read the documentation (
 ### version lora / December 2019
  * Included adjusted Luftdaten forwarder (based on https://github.com/bertrik/LoraLuftdatenForwarder)
  * It has been adjusted for SPS30 as well as enabling saving the data locally in a file
- * updated sketch with new data order
- * updated the SPS30 library to 1.3.7
+ * Updated sketch with new data order
+ * Ipdated the SPS30 library to 1.3.7
 
 ## Author
  * Paul van Haastrecht (paulvha@hotmail.com)
