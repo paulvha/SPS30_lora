@@ -25,7 +25,10 @@ If you plan to use the standard library:
 <br> SPS30 : sps (https://github.com/paulvha/sps30)
 
 ## Software installation
-Obtain the zip and install like any other
+Obtain the zip and install like any other.
+
+Make sure to read the feather lora.odt in the extras directory for changes to
+the config.h for lmic.
 
 ## Program usage
 ### Program options
@@ -40,7 +43,10 @@ Please see the description in the top of the sketch and read the documentation (
  * Included adjusted Luftdaten forwarder (based on https://github.com/bertrik/LoraLuftdatenForwarder)
  * It has been adjusted for SPS30 as well as enabling saving the data locally in a file
  * Updated sketch with new data order
- * Ipdated the SPS30 library to 1.3.7
+ * Updated the SPS30 library to 1.3.7
+
+### Version March 2020
+ * updated with LMIC config.h information
 
 ## Author
  * Paul van Haastrecht (paulvha@hotmail.com)
